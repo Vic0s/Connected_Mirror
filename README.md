@@ -1,104 +1,81 @@
-# Projet miroir connecté : Configuration de la raspberry et contrôle de led
+#Connected_mirror
 
-# Composant : 
+# Cahier des charges
 
-- Raspberry pi 3 / 4
-- Carte mémoir 10giga (minimum)
-- Bande de led WS2801
-- 3 MOFSETS
-- Une bande LED RVB
-- Une breadboard 
-- Fils de connexion (mâle à femelle)
-- Fils de raccordement (mâle à mâle)
-- Trois MOSFET à canal N (par exemple IRLZ34N )
-- Une alimentation appropriée pour la bande LED
+Le miroir connecté intelligent 
 
-# 1. Configuration de la raspeberry
+Projet electronique
 
-- Installez l'os debian bullseyes via l'application raspberry pi imager
-    
-    note : configurer le ssh ainsi que la connexion wireless lan 
+Auteurs du dit cahier des charges 
+Nom Prénom Rôle
+- Florian         LE ROUX Rédacteurs/Concepteurs
+- Cassandre NOEL
+Rédacteurs/Concepteurs
 
-- Connectez-vous en SSH à votre raspberry
+- Victor ROLLAND
+Rédacteurs/Concepteurs
+- M. LADJI
+Commanditaire / Client
 
-   note : vous pouvez utiliser l'application mobile "Net analyzer" pour récupérer l'adresse IP de votre raspberry 
 
-- Installez PHP sur la raspberry
-        
-        sudo apt update
-        sudo apt upgrade -y && sudo reboot
+Historique des versions
 
-        sudo apt -y install lsb-release apt-transport-https ca-certificates 
-        
-        sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+- V0.1
+5/05/22
+Première version suite à l’expression du besoin et d’une première définition de solution
 
-        echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
+- V1
+9/06/22-17/06/22
+Version proposée au commanditaire pour approbation
 
-        sudo apt update
+- V2
+24/06/22
+Cahier des charges validé
 
-        sudo apt -y install php7.4
 
-- Installez mongoDB
+Validations / Numéro de version
 
-        sudo apt install mariadb-server
+- V0.1
+Client
+5/05/22
+Remarque : Ajouter l’authentification sécurisée
 
-    note : pour vérifier le bon fonctionnement de votre base de donnée ou en vérifier le contenu, vous pouvez utiliser la commande suivante :
+## Cadrage – Définition du problème 
 
-        sudo mysql -u root -p
+### Demande du client spécifique à un besoin
+La demande originelle du client est de lui simplifier la vie en conceptualisant un produit intelligent dans une situation quotidienne. 
+Cet objet devra prendre part dans un de nos rituels quotidiens, être attractif et pouvoir répondre à des critères d’ergonomie.
+Le produit créé doit rentrer dans le cadre de l’« Internet des Objets » (I.O.T. en anglais), il s’agit d’un réseau de terminaux physiques, d’ « objets connectés » intégrant des capteurs, des logiciels et d’autres technologies en vue de les connecter à d’autres terminaux et systèmes dans le but d’échanger des données entre eux. 
+Dans notre cadre académique et de la cybersécurité, cet objet connecté devra remplir des critères de sécurité informatique lié à sa connexion Internet et aux données traitées.
 
-- Installez apache 2 
-
-        sudo apt install apache2
-
-    note : pour vérifier le bon fonctionnement de votre base de donnée ou en vérifier le contenu vous pouvez utiliser la commande suivante :
-
-        sudo systemctl status apache2    
-
-- Démarrez votre raspberry sur un page chronium défini 
-
-        sudo apt install chromium -y
-
-        sudo nano /home/pi/.config/lxsession/LXDE-pi/autostart
-        
-                chromium-browser --disable-infobar --app=<ip del a machine qui contient la BDD>
-        
-        sudo reboot
-# Configuration pour affichage sur l'écran 3,5 pouces
+### Cybersécurité de l’I.O.T.
+Le domaine de l’IOT a connu une expansion continue. Il en résulte un grand nombre de vulnérabilités pouvant générer des impacts très critiques. Il faut donc aussi s’assurer d’être en conformité aux nouvelles réglementations.
+Ces nouveaux objets envahissant notre maison et notre vie privée peuvent rapidement devenir une menace pour notre intégrité, une menace pour nos données, une menace pour notre individualité. Du point de vue de la cybersécurité, il faut que ces objets du domaine de la domotique permette à nos données de rester disponible, intègre, confidentielle et si possibles traçables. La double menace ici présente est de réussir à créer de nouveaux outils dit « intelligents », étant hyper connectés et en même temps de limiter cette dernière pour réduire la vulnérabilité présente lors d’une connexion à Internet.
+L’exfiltration de données s’explique par plusieurs failles présentes dans les IOT :
+- Mauvaise gestion des appareils 
+- Surface d’attaque physique plus large 
+- Transfert de données non sécurisés
 
 
 
-Pour observer le bureau sur l'ecran 3,5 pouce, utilisez les commandes suivantes :
+### Objectifs 
+Offrir un service performant et pratique au réveil, qui pourra avoir des évolutivités telle que l’affichage de la planification des réunions pour la journée.
 
-        sudo rm -rf LCD-show
+### Périmètre du projet
+Affichage de plusieurs données comme la météo, un agenda, l’heure ainsi que les informations du profil de l’utilisateur comme le nom, prenom, âge et taille. Aspects basiques de sécurité sur des apllications WEB. Eclairage de LEDs et modification des couleurs. Authentification par login/mdp. Prise en main à distance via navigateur WEB.
 
-        git clone https://github.com/goodtft/LCD-show.git
+### Solution retenue
+Notre solution prend la forme d’un miroir décoratif qui pourra se placer dans une chambre. Nous cherchons à le rendre multifonctionnel pour qu’il puisse s’inscrire dans une routine quotidienne. Concernant l’ergonomie, nous avons misé sur l’attractivité que procure sa fonctionnalité de miroir infini sur la face avant.
+Le miroir connecté intelligent offre une expérience client exceptionnelle en combinant un affichage digital avec des informations utiles. Ce miroir permettra de fournir des informations extérieures, telle que la météo et l’heure.
+Comme les données sont sensibles, à caractères personnels, une authentification sera nécessaire. Les informations seront affichées au travers d’un écran situé sur le côté ou dans le mirroir, laissant ainsi pleine visibilité sur le reflet et la vision de l’écran.
 
-        chmod -R 755 LCD-show
 
-        cd LCD-show/
-
-        sudo ./LCD35-show
-
-Cela aura pour effet de désactiver la vue sur votre sortie HDMI
-Pour revenir à l'affichage d'origine :
-
-        chmod -R 755 LCD-show 
-
-        cd LCD-show/ 
-
-        sudo ./LCD-hdmi
-
-# Contrôle de la bande de leds
-
-Pour réaliser les branchements qui permettront de contrôler la bande de LED, nous avons suivi ce tutoriel : https://dordnung.de/raspberrypi-ledstrip/
-
-# Sources
-
-Liens ayant pu nous aider lors de notre projets 
-
+### Références-Sources
+- https://www.digilor.fr/wp-content/uploads/2017/10/
+- https://tehtris.com/fr/blog/iot-quelle-place-pour-la-cybersecurite
+- https://group.bureauveritas.com/fr/marches-services/cybersecurite/cybersecurite-des-objets-connectes-iot
 - https://dordnung.de/raspberrypi-ledstrip/
 
 - https://www.avoiderrors.com/48316-2/
 
 - https://github.com/tdamdouni/Raspberry-Pi-DIY-Projects/blob/master/_WebArticles/how-to-connect-and-control-a-raspberry-pi-ws2801-rgb-led-strip.md
-
