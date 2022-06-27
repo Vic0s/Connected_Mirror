@@ -2,10 +2,6 @@
 
 # Cahier des charges
 
-Le miroir connecté intelligent 
-
-Projet electronique
-
 Auteurs du dit cahier des charges 
 Nom Prénom Rôle
 - Florian         LE ROUX Rédacteurs/Concepteurs
