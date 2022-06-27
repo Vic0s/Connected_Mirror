@@ -10,7 +10,7 @@ Conseillé d'installé WAMP sur la racine C:\WAMP
 
 Création d'un dossier "Nom du projet"
 
-Les fichiers WEB sont stockés dans C:\WAMP\www\"Nom du projet" : 
+Les fichiers WEB sont stockés dans C:\WAMP\www\ "Nom du projet" : 
 
 ![image](https://user-images.githubusercontent.com/104896709/175987535-306b83d7-0cef-4138-bc93-934bb8790a9a.png)
 
@@ -38,7 +38,7 @@ Le fichier est connected_mirror.sql
 
 # IMPORT DES FICHIERS PHP et CSS
 
-Prenez tout les fichiers et mettez les dans le dossier prévu à cet effet C:\WAMP\www\"Nom du projet"
+Prenez tout les fichiers et mettez les dans le dossier prévu à cet effet C:\WAMP\www\ "Nom du projet"
 
 ![image](https://user-images.githubusercontent.com/104896709/175988674-a7bf9ede-b262-491d-9a17-6fdb5a74ae04.png)
 
