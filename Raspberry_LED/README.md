@@ -3,7 +3,7 @@
 # Composant : 
 
 - Raspberry pi 3 / 4
-- Carte mémoir 10giga (minimum)
+- Carte mémoir 10 gigas (minimum)
 - Bande de led WS2801
 - 3 MOFSETS
 - Une bande LED RVB
