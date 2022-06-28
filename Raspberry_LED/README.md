@@ -90,7 +90,7 @@ Pour revenir à l'affichage d'origine :
 
 # Contrôle de la bande de leds
 
-![image]([https://user-images.githubusercontent.com/104896709/175987535-306b83d7-0cef-4138-bc93-934bb8790a9a.png](https://github.com/Vic0s/Connected_Mirror/blob/main/Raspberry_LED/branchement_raspberry.jpg))
+![image]([(https://github.com/Vic0s/Connected_Mirror/blob/main/Raspberry_LED/branchement_raspberry.jpg)])
 
 Pour réaliser les branchements qui permettront de contrôler la bande de LED, nous avons suivi ce tutoriel : https://dordnung.de/raspberrypi-ledstrip/
 
