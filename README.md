@@ -106,7 +106,7 @@ Voici le résultat que nous avons obtenu au terme de notre projet d'électroniqu
 
 ![image](https://user-images.githubusercontent.com/104560626/176115942-a4be82fd-6a32-4030-9f36-6485e9307f2e.jpg)
 
-Nous sommes déçus de ne pas réussi à obtenir le résultat imaginé en début de projet. Cependant ce projet nous à permis de découvrir l'électronique et nous à donné envie de poursuivre sur des petits projets personnels.
+Nous sommes déçus de ne pas avoir réussi à obtenir le résultat imaginé en début de projet. Cependant ce projet nous à permis de découvrir l'électronique et nous à donné envie de poursuivre sur des petits projets personnels.
 
 ### Références-Sources
 - https://www.digilor.fr/wp-content/uploads/2017/10/
