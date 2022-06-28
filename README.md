@@ -65,6 +65,48 @@ Notre solution prend la forme d’un miroir décoratif qui pourra se placer dans
 Le miroir connecté intelligent offre une expérience client exceptionnelle en combinant un affichage digital avec des informations utiles. Ce miroir permettra de fournir des informations extérieures, telle que la météo et l’heure.
 Comme les données sont sensibles, à caractères personnels, une authentification sera nécessaire. Les informations seront affichées au travers d’un écran situé sur le côté ou dans le mirroir, laissant ainsi pleine visibilité sur le reflet et la vision de l’écran.
 
+### Résultat souhaité
+
+Au terme de notre projet voici ce que nous voulions : 
+
+![miroir_conecté](https://user-images.githubusercontent.com/104560626/176117076-c95bf99c-067a-4974-b09d-96a195e41ec1.jpg)
+![image](https://user-images.githubusercontent.com/104560626/176114313-3f348f6a-99b4-4c77-9db0-57b0ee1d18cc.jpg)
+
+Nous voulions obtenir un miroir combinant l'effet infini et connecté. 
+Malheureusement nous avons rencontré des difficultés :
+
+- Incompatibilités entre Raspbian et MySQL – Utilisation forcée
+de MariaDB – Failles de sécurité, incompatibilités avec les
+méthodes PHP PDO plus modernes.
+
+- Alimentation de 12V qui a forcé sur certains de nos
+composants.
+
+- Manque de broches, dimensionnement de départ mal effectué.
+
+- Sécurité des applications – Serveur WEB
+
+### Points d'améliorations
+
+- Utilisation d’outils pour la mise en forme de la page WEB
+
+- Chiffrement des données dans la base de données
+
+- Communication entre les composants et le serveur WEB
+
+- Ecran plus grand, affichage complexe et peu maniable
+
+- Espacement des composants et esthétique
+
+- Implémentation d’AJAX pour ne pas avoir à rafraichir la page
+
+### Résultat obtenu
+
+Voici le résultat que nous avons obtenu au terme de notre projet d'électronique :
+
+![image](https://user-images.githubusercontent.com/104560626/176115942-a4be82fd-6a32-4030-9f36-6485e9307f2e.jpg)
+
+Nous sommes déçus de ne pas réussi à obtenir le résultat imaginé en début de projet. Cependant ce projet nous à permis de découvrir l'électronique et nous à donné envie de poursuivre sur des petits projets personnels.
 
 ### Références-Sources
 - https://www.digilor.fr/wp-content/uploads/2017/10/
@@ -75,3 +117,4 @@ Comme les données sont sensibles, à caractères personnels, une authentificati
 - https://www.avoiderrors.com/48316-2/
 
 - https://github.com/tdamdouni/Raspberry-Pi-DIY-Projects/blob/master/_WebArticles/how-to-connect-and-control-a-raspberry-pi-ws2801-rgb-led-strip.md
+
