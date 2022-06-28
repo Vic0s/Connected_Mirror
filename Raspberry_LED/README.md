@@ -102,7 +102,7 @@ Pour tester que votre montage est opérationel utilisez les commandes suivantes 
     sudo pigpiod - Démarre PiGPIO
     pigs p 17 255 - La bande led doit s'allumer en rouge
     
-Ce github vous propose un code python permettant de contrôler davantage votre bande led 
+Ce github vous propose un code python permettant de contrôler davantage votre bande led : https://github.com/dordnung/raspberrypi-ledstrip/blob/master/fading.py
 
 Pour réaliser les branchements qui permettront de contrôler la bande de LED, nous avons suivi ce tutoriel : https://dordnung.de/raspberrypi-ledstrip/
 
