@@ -12,6 +12,10 @@
 - Fils de raccordement (mâle à mâle)
 - Trois MOSFET à canal N (par exemple IRLZ34N )
 - Une alimentation appropriée pour la bande LED
+- un miroir
+- du film reflechissant
+- du plexiglass
+- du carton 
 
 # 1. Configuration de la raspeberry
 
