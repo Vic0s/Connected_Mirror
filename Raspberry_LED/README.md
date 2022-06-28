@@ -90,7 +90,17 @@ Pour revenir à l'affichage d'origine :
 
 # Contrôle de la bande de leds
 
-![image]([(https://user-images.githubusercontent.com/104560626/176108347-ece66397-4660-4300-b42a-fa4412b20149.jpg)])
+Voici le branchement que vous devez effectuer pour vous permettre de contrôler la bande de led :
+
+![image](https://user-images.githubusercontent.com/104560626/176110126-4daba8e7-1386-4fad-8977-e0512885e437.jpg)
+![image](https://user-images.githubusercontent.com/104560626/176108347-ece66397-4660-4300-b42a-fa4412b20149.jpg)
+![image](https://user-images.githubusercontent.com/104560626/176109882-e131b697-c261-4bc5-80fd-8af496c61bb1.jpg)
+![image](https://user-images.githubusercontent.com/104560626/176108057-86f40d6d-837d-42c2-ba20-a40c20939bb7.jpg)
+
+Pour tester que votre montage est opérationel utilisez les commandes suivantes :
+
+    sudo pigpiod - Démarre PiGPIO
+    pigs p 17 255 - La bande led doit s'allumer en rouge
 
 Pour réaliser les branchements qui permettront de contrôler la bande de LED, nous avons suivi ce tutoriel : https://dordnung.de/raspberrypi-ledstrip/
 
